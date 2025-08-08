@@ -1,0 +1,5 @@
+RequestMapping ia an annotation which is available in springboot to map a webrequest tp specific method within a controller class or even a controller 
+
+
+At class level 
+Request mapping is used to set the base url for all methos which is at inside clas 

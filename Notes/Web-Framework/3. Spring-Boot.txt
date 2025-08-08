@@ -1,0 +1,19 @@
+Spring Boot is an Open Source , Java Based frontend used to create stand-alone production-grade Spring-based Application 
+
+
+It's a spring based web framework and its run on java . 
+
+Core Components of Spring Boot : 
+
+1.Spring Boot Starters 
+2. Auto Configuration -> It automatically your spring application based on dependencies that we have added 
+
+3. Spring Boot Actuator -> Spring boot provide spring boot ctuator which we can add in project and it will enable the production ready features like monotroing application , metrix gathering , tracing http request and so on. 
+
+4. Embeded Server 
+
+5. Spring Boot Dev Tools 
+
+
+
+ 

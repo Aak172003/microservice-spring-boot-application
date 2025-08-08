@@ -1,0 +1,19 @@
+Containerize the Application Using Docker
+
+The codebase is now containerized.
+
+Docker solves the problems of dependency management, compatibility issues, and environmental consistency by providing containerization.  
+It enables developers to package their applications along with all dependencies into a container, ensuring consistent execution across different host systems.  
+This eliminates version conflicts.
+
+Containerization is a lightweight virtualization technology that enables you to package your application along with its dependencies into a standard unit called a **container**.  
+With Docker, we can create containers that include everything needed for the application to run—such as the code, runtime, libraries, and even system tools.
+
+These containers are **portable**, meaning they can be moved across systems and deployed on any machine that supports Docker or has Docker running.  
+This ensures that the same container running on one machine will run exactly the same on another machine.  
+
+This guarantees consistency.
+
+Hypervisor
+
+A **hypervisor** enables us to interact with and manage **virtual machines (VMs)**.  

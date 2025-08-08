@@ -1,0 +1,26 @@
+This is how run postgresql image 
+docker run -d --name postgresdb -e POSTGRES_PASSWORD=aakash@1707 postgres:14
+
+This is how we can run pgadmin to see gui 
+docker run -d --name pgadmin -e PGADMIN_DEFAULT_EMAIL=user@domain.com -e PGADMIN_DEFAULT_PASSWORD=SuperSecret dpage/pgadmin4
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Using Docker Network because 
+container between the same network they can communicate between them using container name 
+
+This is how run postgresql image 
+docker run -d --name postgresdb --network my-network -e POSTGRES_PASSWORD=aakash@1707 postgres:14
+
+This is how we can run pgadmin to see gui 
+docker run -d --name pgadmin --network my-network -e PGADMIN_DEFAULT_EMAIL=user@domain.com -e PGADMIN_DEFAULT_PASSWORD=SuperSecret dpage/pgadmin4
+
+----------------------------------------------------------------------------------------------------------------------------
+
+This is how we can create Docker Network
+docker network craete my-network 
+
+This is how communicate two container in same network
+docker exec -it pgadmin ping postgresdb
+
+----------------------------------------------------------------------------------------------------------------------------

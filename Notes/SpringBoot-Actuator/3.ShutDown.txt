@@ -1,0 +1,15 @@
+when i set shuddown endppoint which means i am talking about graceful shuddown 
+
+GraceFul ShutDown -> means it will complete all the ongoing request before the actual shutdown takes place 
+
+We can't find shutdown in http://localhost:8080/actuator this endpoint , because by default shutdown is diable we can't see 
+because anyone get this shutdown endoint then they can be able to shutdown the application 
+
+Also get request is not enable by default 
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
+Exposing shutdown endpoint is quite risky because anyone can be shutdown your application , 
+so make sure if request goes comes your company ip address then this will execute

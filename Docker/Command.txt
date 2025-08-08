@@ -1,0 +1,58 @@
+Note : And this command only work on gitbash terminal 
+
+
+This is how i can build docker image of spring-boot application 
+./mvnw spring-boot:build-image "-Dspring-boot.build-image.imageName=aakash1707/eshop-application"
+
+This is How we can push docer image to docker hub 
+docker push aakash1707/eshop-application
+
+This is how we can run our spring boot application if we had docker images 
+docker run -d -p 8080:8080 aakash1707/eshop-application
+
+
+
+------------------------------ Commands ------------------------------------------------
+
+1. docker pull <image>
+2. docker push <username/image>
+
+This is how we can run docker image 
+3. docker run -it -d -p <host-port>:<container-port> --name <name> <image>
+
+This is how we can start a container 
+4. docker start <container-id/container-name>
+
+This is how we can stor docker container 
+5. docker stop <container-id/container-name>
+
+This is used to remove stopped container
+6. docker rm <container-id/container-name>
+
+This is used to remove forcefully means if our container is in running state 
+docker rm -f postgresdb pgadmin
+
+This command is used to remove a docker image from local storage 
+7. docker rmi <image-id/image-name>
+
+This is used to get list of running docker container
+8. docker ps 
+
+This is used to get list of running as well as stopped docker container
+9. docker ps -a
+
+This is used to get list of all docker images 
+10 docker images 
+
+This command is used to access a running container
+11. docker exec -it <container-id/container-name> bash
+
+
+This is used to buidl an image from the dockerfile 
+12. docker build -t <username/image> . 
+
+This command is used to get logs of particular conatiner which is running
+13. docker logs <container-id/container-name> 
+
+This is used to get more details of a particular container 
+14. docker inspect <container-id/container-name>

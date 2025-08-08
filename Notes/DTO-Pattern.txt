@@ -1,0 +1,4 @@
+DTO -> Data Transfer Object 
+DTO is a design pattern used to transfer data between software application subsystem 
+
+With DTO pattern we have better control on what is expose to outer world

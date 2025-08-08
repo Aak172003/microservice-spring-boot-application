@@ -1,0 +1,2 @@
+JPA -> Jakarta Persistance API
+It's a framework that helps java application store , update , read and delete data in the database without writing complex sql queries 

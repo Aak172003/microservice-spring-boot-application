@@ -1,0 +1,6 @@
+Response Entity allows you to wrap the response in it 
+so bascically u can return it with any other response code 
+
+We have two things 
+1. ResponseEntity from springboot 
+2. HttpStatus 

@@ -1,0 +1,4 @@
+Monolithic architecture is a design where all the components of an application are interconnected and interdependent 
+
+
+Microservice structures an application as a collection of small autonomouse service 

@@ -1,0 +1,11 @@
+Web Framework is nothing but a collection of tools and modules that is needed to do standard tasks across every we application 
+
+Popular Web Framework
+
+1. Spring Boot ( Java Based Framework )
+2. Django ( Python Based Framework )
+3. Flask ( Python Based Framework ) -> Much more lightweight than Django and it is used for small projects , and here we have more control over the code 
+
+4. Express ( JavaScript Based Framework )
+5. Ruby on Rails ( Ruby Based Framework ) -> This is based on Ruby Programming language . It is known for a philosophy of convention over configuration 
+

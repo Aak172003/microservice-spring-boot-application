@@ -1,0 +1,12 @@
+PostgreSQL is an object-relational database managemenet system (ORDBMS) Or it is often referred as postgres 
+
+This is a database management system 
+It's free and Open source 
+
+Why is PostgreSQL Popular ? 
+
+1. SQL Complienece -> it means postgresql follow the sql standards closely , and it make life easier using which we can create more and more application 
+2. Extensiblity -> It allows you to define your own data types , operators indexcies and so on. 
+3. Performance 
+4. String Community Support 
+5. Data Integrity 

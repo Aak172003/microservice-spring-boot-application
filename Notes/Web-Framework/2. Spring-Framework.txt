@@ -1,0 +1,30 @@
+Spring Framework is a java based framework , and we have a spring boot which is based on spring . 
+
+Spring take away the hassle of building application 
+
+Feature of Framwork : 
+
+1. IOC ( Inversion of Control ) -> spring manages the lifecycle and configuration of objects . These objects are known as beans . So object that's are managed by spring framer=work are know as beans . 
+IOC is a design principle that is commonly used in software developement but it is a very valurable feature . 
+How does spring do this with the feature called Dependeny Injection which allows it to define the dependencies of the class externally and it provide them to the class whenever the class needs it during the runtime . 
+
+2. Data Access -> Spring provide a consistent and easy way which is a lot more simpled to handle data access . (What it means -> Acessing data from different sources )
+
+Spring Framework has things like jdbc , hibernate , jpa which make a life lot more easier when building database driven application . It enables u to work with databses or datasoruces in an easy and simple way . 
+
+3. MVC Framework -> It provide the clear seperation between the model code. 
+Here Model means Entity ,
+View means which is responsible to interact with the user . 
+Controller which handle in between and make sure that everything work smoothly . 
+
+4. Transaction Management -> 
+
+5. Security -> Spring Security is a module that exist in Spring Framework . 
+It provide features like authentication , it enable to define authorization , it enable u to protect againt common vulnerabilities 
+
+6. Testing Support -> Spring Framework also has good support for unit testing and integration testing 
+
+7. Internalisation ( i18n) and Localization ( i10n ) -> 
+ 
+
+

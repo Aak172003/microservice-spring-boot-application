@@ -1,0 +1,14 @@
+"metrics": {
+"href": "http://localhost:8080/actuator/metrics",
+"templated": false
+},
+
+
+This above is used to get list of available metrics
+
+"metrics-requiredMetricName": {
+"href": "http://localhost:8080/actuator/metrics/{requiredMetricName}",
+"templated": true
+},
+
+This is used to view a specific metrics or details about specific metrics

@@ -1,0 +1,4 @@
+Entity represent a table in a relational database 
+and each instance of an entity corresponsds to single row within that particular table 
+
+What are entities -> entities essentially in jpa are nothing more than plain old java objects (pojos)

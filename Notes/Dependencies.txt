@@ -1,0 +1,5 @@
+Dependencies refers to external libraries or module that your application need to function properly 
+
+Spring Boot Makes use of Maven and Gradle build system to manage dependencies 
+
+

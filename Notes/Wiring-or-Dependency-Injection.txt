@@ -1,0 +1,8 @@
+
+There are multiple ways to implement dependency inject
+
+1. AutoWired
+2. Via Adding a Constructor by ourself manually
+
+// If we wired using lombook , so it provide setter and getter function automatically
+3. RequiredArgsConstructor ( Via Lombok )

@@ -1,0 +1,19 @@
+
+spring:
+  application:
+    name: user-service
+  h2:
+    console:
+      enabled: true
+  #  SQL statements will be printed in the console.
+  jpa:
+    show-sql: true
+  #  Hibernate will drop and recreate the database schema on each application startup.
+    hibernate:
+      ddl-auto: create
+  # In memory means this will persist data until application is running
+  # If application starts then a database clears all the data
+  datasource:
+    url: jdbc:h2:mem:test
+server:
+  port: 8082

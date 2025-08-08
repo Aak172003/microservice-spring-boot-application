@@ -1,0 +1,25 @@
+
+What is Spring Boot Actuator? 
+
+Spring Boot Actuator is a built-in feature of Spring Boot applications that provides production-ready tools to monitor and manage your application.
+
+It acts as an interface or tool that gives you insights into the internal state of your application while it's running. 
+With Actuator, you can access a dashboard or endpoints to see what's happening in your application in real time.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Why is it important?
+Spring Boot Actuator is essential because it allows you to monitor, manage, and troubleshoot your application effectively during development and in production environments.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Key Features:
+
+1. Built-in Endpoints : 
+Access to various operational endpoints for health checks, metrics, environment details, etc.
+
+2. Real-Time Metrics : 
+View live performance metrics like memory usage, active threads, and HTTP request stats.
+
+3. Customizable Access : 
+You can configure which endpoints are exposed and who can access them.
