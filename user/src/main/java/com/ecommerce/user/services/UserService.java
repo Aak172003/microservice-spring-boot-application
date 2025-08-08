@@ -15,15 +15,15 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class UserService {
-    //    We need to migrate from list based storage to database storage
+    //    We need to migrate from list-based storage to database storage
     private final UserRepository userRepository;
 
-//    This is list based storage we are removing and using database storage
+//    This is list-based storage we are removing and using database storage
 //    private List<User> userList = new ArrayList<>();
 //    private Long nextId = 1L;
 
 //    here receive userRepository object with dependency injection
-//    we can add constructor like this , but we have one more option like RequiredArgsConstructor whcih do the dame things
+//    we can add constructor like this, but we have one more option like RequiredArgsConstructor whcih do the dame things
 //    public UserService(UserRepository userRepository) {
 //        this.userRepository = userRepository;
 //    }
@@ -34,17 +34,17 @@ public class UserService {
 //        System.out.println(userList);
 //        return  userList;
 
-//        This is database storage approach
+//        This is a database storage approach
 
 //        This is before DTO implement
-//        return  userRepository.findAll();
+//        return userRepository.findAll();
 
         return  userRepository.findAll().stream()
                 .map(this::mapToUserResponse)
                 .collect(Collectors.toList());
     }
 
-    public Optional<UserResponse> fetchUser(Long id){
+    public Optional<UserResponse> fetchUser(String id){
 //        public User fetchUser(Long id){
 
 //        for(User user:userList) {
@@ -56,15 +56,15 @@ public class UserService {
 
 //        Compare with id which it receives from where this is called
 
-//        This is list based storage , and above as well , but here we use java feature like streams , but  above we do simply loop
+//        This is list-based storage, and above as well , but here we use java feature like streams , but  above we do simply loop
 
 //        return userList.stream()
 //                .filter(user -> user.getId().equals(id))
 //                .findFirst();
 
-//        This is database storage approach
+//        This is a database storage approach
 
-        return userRepository.findById(id).map(this::mapToUserResponse);
+        return userRepository.findById(String.valueOf(id)).map(this::mapToUserResponse);
     }
 
 
@@ -75,13 +75,13 @@ public class UserService {
 //        System.out.println("add user ::::::::::::: " );
 //        System.out.println(userList);
 
-//        This is database storage approach
+//        This is a database storage approach
         User user = new User();
         updateUserFromRequest(user, userRequest);
         userRepository.save(user);
     }
 
-    public boolean updateUser(Long id , UserRequest updatedUserRequest){
+    public boolean updateUser(String id , UserRequest updatedUserRequest){
 //        return userList.stream()
 //        .filter(user -> user.getId().equals(id))
 //        .findFirst()
@@ -103,7 +103,7 @@ public class UserService {
 //        }).orElse(false);
 
 
-        return userRepository.findById(id)
+        return userRepository.findById(String.valueOf(id))
                 .map(existingUser ->{
                     updateUserFromRequest(existingUser , updatedUserRequest);
                     userRepository.save(existingUser);
