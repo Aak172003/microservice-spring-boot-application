@@ -21,9 +21,14 @@ spring:
     # jdbc means a protocol using which can connect to a database
     # postgresql means database name or database type
     # //localhost:5432/product This is a database url, and here product is a database name
-    url: jdbc:postgresql://localhost:5432/product
-    username: eshopdb
-    password: aakash@1707
+#    url: jdbc:postgresql://localhost:5432/product
+#    username: eshopdb
+#    password: aakash@1707
+
+#    This is remote postgres sql database
+    url: jdbc:postgresql://ep-lingering-pine-aei4dwms-pooler.c-2.us-east-2.aws.neon.tech/product?sslmode=require&channel_binding=require
+    username: neondb_owner
+    password: npg_qCpoU0x4sALI
 
   jpa:
     database: POSTGRESQL
