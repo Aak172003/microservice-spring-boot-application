@@ -40,7 +40,8 @@ spring:
 #  This is the setup for mongodb database
   data:
     mongodb:
-      uri: mongodb://localhost:27017/userdb
+#      uri: mongodb://localhost:27017/userdb
+      uri: mongodb+srv://prajapatiaakash364:bZ7vdsjmMFVpOVAE@user-data.61hjt8l.mongodb.net/?retryWrites=true&w=majority&appName=user-data
       database: userdb
 
 server:
