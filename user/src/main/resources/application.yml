@@ -2,6 +2,7 @@
 spring:
   application:
     name: user-service
+
 #  h2:
 #    console:
 #      enabled: true
@@ -40,8 +41,11 @@ spring:
 #  This is the setup for mongodb database
   data:
     mongodb:
-#      uri: mongodb://localhost:27017/userdb
-      uri: mongodb+srv://prajapatiaakash364:bZ7vdsjmMFVpOVAE@user-data.61hjt8l.mongodb.net/?retryWrites=true&w=majority&appName=user-data
+#      This is a local mongodb database
+      uri: mongodb://localhost:27017/userdb
+
+#      This is url of a remote database ( mongodb atlas )
+#      uri: mongodb+srv://prajapatiaakash364:bZ7vdsjmMFVpOVAE@user-data.61hjt8l.mongodb.net/?retryWrites=true&w=majority&appName=user-data
       database: userdb
 
 server:

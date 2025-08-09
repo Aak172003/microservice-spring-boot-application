@@ -40,46 +40,86 @@
 #  postgres:
 #  pgadmin:
 
-
+#-------------------------------------------------------------------------------------
 
 # This is how we set up or run MySQL Docker Container
 # Where MySQL is the database and PhPAdmin is the GUI Part
+#services:
+#  mysql:
+#    container_name: mysql_container
+#    image: mysql
+#    environment:
+#      MYSQL_ROOT_PASSWORD: aakash
+#      MYSQL_DATABASE: product
+#      MYSQL_USER: aakash
+#      MYSQL_PASSWORD: aakash
+#    volumes:
+#      - mysql_data:/var/lib/mysql
+#    ports:
+#      - "3307:3306"
+#    networks:
+#      - mysql
+#    restart: unless-stopped
+#
+#  phpmyadmin:
+#    container_name: phpmyadmin_container
+#    image: phpmyadmin/phpmyadmin
+#    environment:
+#      PMA_HOST: mysql
+#      PMA_PORT: 3306
+#      MYSQL_ROOT_PASSWORD: aakash
+#    ports:
+#      - "8484:80"
+#    networks:
+#      - mysql
+#    restart: unless-stopped
+#
+#networks:
+#  mysql:
+#    driver: bridge
+#
+#volumes:
+#  mysql_data:
 
+
+# -------------------------------------------------------------------------------------------------
+# Again Switch to Postgres SQL Database
 
 services:
-  mysql:
-    container_name: mysql_container
-    image: mysql
+  postgres:
+    container_name: postgres_container
+    image: postgres:14
     environment:
-      MYSQL_ROOT_PASSWORD: aakash
-      MYSQL_DATABASE: product
-      MYSQL_USER: aakash
-      MYSQL_PASSWORD: aakash
+      POSTGRES_USER: aakash
+      POSTGRES_PASSWORD: aakash
+      PGDATA: /data/postgres
     volumes:
-      - mysql_data:/var/lib/mysql
+      - postgres:/data/postgres
     ports:
-      - "3307:3306"
+      - "5432:5432"
     networks:
-      - mysql
+      - postgres
     restart: unless-stopped
 
-  phpmyadmin:
-    container_name: phpmyadmin_container
-    image: phpmyadmin/phpmyadmin
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4
     environment:
-      PMA_HOST: mysql
-      PMA_PORT: 3306
-      MYSQL_ROOT_PASSWORD: aakash
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@gmail.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
     ports:
-      - "8484:80"
+      - "5050:80"
     networks:
-      - mysql
+      - postgres
     restart: unless-stopped
 
 networks:
-  mysql:
+  postgres:
     driver: bridge
 
 volumes:
-  mysql_data:
-
+  postgres:
+  pgadmin:

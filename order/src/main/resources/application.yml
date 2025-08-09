@@ -22,8 +22,8 @@ spring:
     # postgresql means database name or database type
     # //localhost:5432/order This is a database url, and here order is a database name
     url: jdbc:postgresql://localhost:5432/order
-    username: eshopdb
-    password: aakash@1707
+    username: aakash
+    password: aakash
 
   jpa:
     database: POSTGRESQL
