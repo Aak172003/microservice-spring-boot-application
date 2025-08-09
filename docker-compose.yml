@@ -1,38 +1,85 @@
+# This is how we set up or run Postgres and PgAdmin Docker Container
+# Where postgres is the database and PgAdmin is the GUI
+
+#services:
+#  postgres:
+#    container_name: postgres_container
+#    image: postgres:14
+#    environment:
+#      POSTGRES_USER: eshopdb
+#      POSTGRES_PASSWORD: aakash@1707
+#      PGDATA: /data/postgres
+#    volumes:
+#      - postgres:/data/postgres
+#    ports:
+#      - "5432:5432"
+#    networks:
+#      - postgres
+#    restart: unless-stopped
+#
+#  pgadmin:
+#    container_name: pgadmin_container
+#    image: dpage/pgadmin4
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@gmail.org}
+#      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+#      PGADMIN_CONFIG_SERVER_MODE: 'False'
+#    volumes:
+#      - pgadmin:/var/lib/pgadmin
+#    ports:
+#      - "5050:80"
+#    networks:
+#      - postgres
+#    restart: unless-stopped
+#
+#networks:
+#  postgres:
+#    driver: bridge
+#
+#volumes:
+#  postgres:
+#  pgadmin:
+
+
+
+# This is how we set up or run MySQL Docker Container
+# Where MySQL is the database and PhPAdmin is the GUI Part
+
+
 services:
-  postgres:
-    container_name: postgres_container
-    image: postgres:14
+  mysql:
+    container_name: mysql_container
+    image: mysql
     environment:
-      POSTGRES_USER: eshopdb
-      POSTGRES_PASSWORD: aakash@1707
-      PGDATA: /data/postgres
+      MYSQL_ROOT_PASSWORD: aakash
+      MYSQL_DATABASE: product
+      MYSQL_USER: aakash
+      MYSQL_PASSWORD: aakash
     volumes:
-      - postgres:/data/postgres
+      - mysql_data:/var/lib/mysql
     ports:
-      - "5432:5432"
+      - "3307:3306"
     networks:
-      - postgres
+      - mysql
     restart: unless-stopped
 
-  pgadmin:
-    container_name: pgadmin_container
-    image: dpage/pgadmin4
+  phpmyadmin:
+    container_name: phpmyadmin_container
+    image: phpmyadmin/phpmyadmin
     environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@gmail.org}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
-      PGADMIN_CONFIG_SERVER_MODE: 'False'
-    volumes:
-      - pgadmin:/var/lib/pgadmin
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: aakash
     ports:
-      - "5050:80"
+      - "8484:80"
     networks:
-      - postgres
+      - mysql
     restart: unless-stopped
 
 networks:
-  postgres:
+  mysql:
     driver: bridge
 
 volumes:
-  postgres:
-  pgadmin:
+  mysql_data:
+
