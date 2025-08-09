@@ -41,15 +41,38 @@ spring:
 #    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 
-# This is how we setup for MySQL Database
+#  # This is how we set up for local MySQL Database,
+#  #  This is the setup for MySQL Database
+#  datasource:
+#    # jdbc means a protocol using which can connect to a database
+#    # postgresql means database name or database type
+#    # //localhost:5432/order This is a database url, and here order is a database name
+#    url: jdbc:mysql://localhost:3306/product
+#    username: root
+#    password: aakash@17072003
+#
+#  jpa:
+#    #  SQL statements will be printed in the console.
+#    show-sql: true
+#    #  Hibernate will drop and recreate the database schema on each application startup. This is used for schema management
+#    hibernate:
+#      ddl-auto: update
+#    # Whenever spring-boot interacts with a database, it creates a query
+#    database-platform: org.hibernate.dialect.MySQLDialect
+#    properties:
+#      hibernate:
+#        format_sql: true
+
+
+  # This is how we set up for remote MySQL Database where i use phpmyadmin for gui ,
   #  This is the setup for MySQL Database
   datasource:
     # jdbc means a protocol using which can connect to a database
     # postgresql means database name or database type
     # //localhost:5432/order This is a database url, and here order is a database name
-    url: jdbc:mysql://localhost:3306/product
-    username: root
-    password: aakash@17072003
+    url: jdbc:mysql://localhost:3307/product
+    username: aakash
+    password: aakash
 
   jpa:
     #  SQL statements will be printed in the console.
@@ -62,7 +85,6 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
 
 server:
   port: 8081

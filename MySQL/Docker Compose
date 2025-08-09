@@ -1,0 +1,5 @@
+This is how we can run docker compose
+docker compose up -d
+
+This is how remove or down container which are running inside docker container
+docker compose down

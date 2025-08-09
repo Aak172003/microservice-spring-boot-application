@@ -57,6 +57,7 @@
 <!--		</dependency>-->
 
 <!--		This is how we set up MySQL Database -->
+<!--		This is how we can set up remote MySQL Database, and phpmyadmin is the gui-->
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
