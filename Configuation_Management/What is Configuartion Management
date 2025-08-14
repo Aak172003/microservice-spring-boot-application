@@ -1,0 +1,17 @@
+It simply means managing and controlling the configurations of each microservice in the system
+
+What does configuration actually means ?
+
+Configuration means or Configurations refers to the parameters that control the behaviour of your application or the service
+And Configuration may include details such as database connections , external service urls , caching systems and more .
+
+----------------------------------------------------------------------------------------------------------------------------
+
+How does spring boot loads configuration
+
+1. Parsing and Environment -> parsing application.properties or application.yml file and added to the environment which is required to run an application
+2. Relaxed Binding -> It will bind the value to the key, and here key is in application.properties or application.yml file
+
+
+
+

@@ -1,0 +1,14 @@
+Externalized Configuration :
+
+Externalized Configuration allows you to keep the configuration settings of your application separate from the codebase.
+It makes your application much more flexible , easer to manege , safer to deploy for different environment
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Ways of Externalizing Configurations
+
+1. using application.properties or application.yaml or application.yml file
+2. Environment Variables
+3. Command Line Argument
+4. Configuration Files in External Location
+5. Cloud Configuration (e.g Spring Cloud Config Servers)
