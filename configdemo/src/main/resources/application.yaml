@@ -1,0 +1,12 @@
+#spring.application.name=config-demo
+spring:
+  application:
+    name: config-demo
+  profiles:
+    active: prod
+
+#build:
+#  id: 001
+#  version: 2.2.3
+#  name: "Default-Build"
+#  type: "Default Build"
