@@ -1,0 +1,6 @@
+#spring.application.name=config-demo
+build:
+  id: 101
+  version: 1.2.3
+  name: "Production-Build"
+  type: "Production Build"
