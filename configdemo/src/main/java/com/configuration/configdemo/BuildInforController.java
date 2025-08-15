@@ -6,15 +6,24 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BuildInforController {
-//    This annotation doing to job is injecting yaml value to here variables
+//    Value annotation in spring boot is straightforward used to inject value to the variable from external sources such as application.properties or application.yml
 
-    @Value("${build.id}")
+//    This is how we can set default kind of value
+//    @Value("${build.id:default}")
+//    This default value if we provide is it throws error like no active profile set.'
+
+//    @Value("${build.id}")
+//    @Value("${OS:default}")
+    @Value("${build.id:default}")
     private String buildId;
 
-    @Value("${build.version}")
+//    @Value("${USERPROFILE:default}")
+
+    @Value("${build.version:default}")
     private String buildVersion;
 
-    @Value("${build.name}")
+//    @Value("${JAVA_HOME:default}")
+    @Value("${build.name:default}")
     private String buildName;
 
     @GetMapping("/build-info")
