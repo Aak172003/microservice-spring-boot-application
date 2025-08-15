@@ -2,8 +2,8 @@
 spring:
   application:
     name: config-demo
-  profiles:
-    active: prod
+#  profiles:
+#    active: dev
 
 #build:
 #  id: 001
