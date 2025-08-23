@@ -14,6 +14,8 @@ public class BuildInforController {
 
 //    @Value("${build.id}")
 //    @Value("${OS:default}")
+//    If we provide default value and also we enable default profile active ,
+//    so this will show values from application.yml file because i activate default profile
     @Value("${build.id:default}")
     private String buildId;
 
