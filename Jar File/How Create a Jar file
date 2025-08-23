@@ -1,0 +1,31 @@
+This will run only in git bash
+./mvnw clean package
+
+And this will create a jar file inside target folder like target/configdemo-0.0.1-SNAPSHOT.jar
+
+---------------------------------------------------------------------------------------------------------------
+
+This is how we can run jar file
+java -jar  target/configdemo-0.0.1-SNAPSHOT.jar
+
+-----------------------------------------------------------------------------------------
+
+This is the way how we can set any variable
+
+Linux/macOS (Terminal)
+export BUILD_ID=12345
+export BUILD_VERSION=1.0.0
+export BUILD_NAME=ProductService
+java -jar target/app.jar
+
+Windows (Command Prompt)
+set BUILD_ID=12345
+set BUILD_VERSION=1.0.0
+set BUILD_NAME=ProductService
+java -jar target/app.jar
+
+Windows (PowerShell)
+$env:BUILD_ID="12345"
+$env:BUILD_VERSION="1.0.0"
+$env:BUILD_NAME="ProductService"
+java -jar target/app.jar

@@ -1,0 +1,10 @@
+What is Jar Files ?
+
+1. Jar files is a compressed format of compiled java project .
+Here compiled means it contains .class files not .java files
+
+2. It contains .class files + meta data and some other resource
+
+3. This Jar file is used to distribute java code/libraries for use by any other projects
+
+4. Also we can directly execute or run java program (without any IDE)

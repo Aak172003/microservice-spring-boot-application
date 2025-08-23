@@ -5,8 +5,8 @@ spring:
 #  profiles:
 #    active: dev
 
-#build:
-#  id: 001
-#  version: 2.2.3
-#  name: "Default-Build"
-#  type: "Default Build"
+build:
+  id: 122
+  version: 2.2.2
+  name: "Default-Build"
+  type: "Default Build"
