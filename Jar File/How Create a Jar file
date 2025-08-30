@@ -11,7 +11,12 @@ java -jar  target/configdemo-0.0.1-SNAPSHOT.jar
 ---------------------------------------------------------------------------------------------------------------
 
 This is how we can pass environment from JVM System Properties via running a jar file
+This is for git bash
+
 java -Dbuild.id=9999 -Dbuild.name=9Build -Dbuild.version=1.0.1 -jar target/configdemo-0.0.1-SNAPSHOT.jar
+
+This is the way to execute this on command prompt use -- instead of -D
+java --build.id=9999 --build.name=9Build --build.version=1.0.1 -jar target/configdemo-0.0.1-SNAPSHOT.jar
 
 -----------------------------------------------------------------------------------------
 
