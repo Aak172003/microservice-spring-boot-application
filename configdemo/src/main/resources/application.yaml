@@ -6,7 +6,17 @@ spring:
 #    active: dev
 
 build:
-  id: 122
-  version: 2.2.2
-  name: "Default-Build"
-  type: "Default Build"
+##  This is the way to get dynamically id here, if we set ID=9999 like in intellij IDE
+  id: ${ID}
+#  id: 122
+  version: ${VERSION}
+#  version: 2.2.2
+  name: ${NAME}
+#  name: "Default-Build"
+
+
+#  This is how we set environment variable from intellij IDE
+#  BUILD_ID=444444;BUILD_NAME=NAME_TEST;BUILD_VERSION=1.8.0
+
+# This is how we get dynamic value with ${} sign
+# ID=444444; NAME=NAME_TEST; VERSION=1.8.0
