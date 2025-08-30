@@ -8,6 +8,11 @@ And this will create a jar file inside target folder like target/configdemo-0.0.
 This is how we can run jar file
 java -jar  target/configdemo-0.0.1-SNAPSHOT.jar
 
+---------------------------------------------------------------------------------------------------------------
+
+This is how we can pass environment from JVM System Properties via running a jar file
+java -Dbuild.id=9999 -Dbuild.name=9Build -Dbuild.version=1.0.1 -jar target/configdemo-0.0.1-SNAPSHOT.jar
+
 -----------------------------------------------------------------------------------------
 
 This is the way how we can set any variable
