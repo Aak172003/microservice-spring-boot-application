@@ -15,7 +15,7 @@ This is the way how we can set any variable
 Linux/macOS (Terminal)
 export BUILD_ID=12345
 export BUILD_VERSION=1.0.0
-export BUILD_NAME=ProductService
+export BUILD_NAME=TestService
 java -jar target/app.jar
 
 Windows (Command Prompt)
