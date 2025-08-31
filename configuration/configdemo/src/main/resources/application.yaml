@@ -2,10 +2,15 @@
 spring:
   application:
     name: configdemo
+
+#  here setup for a spring cloud config client
+#  This marked is as optional, if not able to fetch from remote location then access from local environment variable (yml or properties file)
+  config:
+    import: optional:configserver:http://localhost:8888
 #   If I pass default profile from program argument, environment in intellij IDE, then we don't
 #   need to pass here profiles.active=dev
-#  profiles:
-#    active: dev
+  profiles:
+    active: dev
 
 # This is a default active profile
 build:
