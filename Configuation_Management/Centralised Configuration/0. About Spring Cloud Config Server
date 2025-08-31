@@ -1,0 +1,16 @@
+Spring Cloud Config Server is part of the Spring Cloud project — a suite of tools specifically designed for building and managing cloud-native applications.
+
+It provides centralized external configuration management, backed by Git, file system, SVN, or even a database.
+It can talk with Git, file system, SVN, or even a database to access configuration.
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+Spring Cloud Config Server
+
+1. Storing Configurations
+2. Serving Configurations
+3. Refreshing Configurations
+4. Easy Integration with Spring Boot
+5. Support for different Environment
+6. Encryption and Decryption

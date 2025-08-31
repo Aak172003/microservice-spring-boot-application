@@ -1,7 +1,7 @@
 #spring.application.name=config-demo
 spring:
   application:
-    name: config-demo
+    name: configdemo
 #   If I pass default profile from program argument, environment in intellij IDE, then we don't
 #   need to pass here profiles.active=dev
 #  profiles:
