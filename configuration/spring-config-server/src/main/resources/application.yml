@@ -6,6 +6,10 @@ spring:
       server:
         git:
           uri: https://github.com/Aak172003/spring-app-configuration
+          # To access environments from private spring config server repository, we need to create a token for validation,
+          # or even we can do hard-coding as well
+          username: ${GIT_USER}
+          password: ${GIT_TOKEN}
 
 server:
   port: 8888
