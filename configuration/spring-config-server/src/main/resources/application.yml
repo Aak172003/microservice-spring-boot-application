@@ -26,11 +26,8 @@ spring:
           sql: "SELECT PROP_KEY, PROP_VALUE FROM PROPERTIES WHERE APPLICATION=? AND PROFILE=? AND LABEL=?"
           default-label: main
 
-
-
-
-
-
-
 server:
   port: 8888
+
+encrypt:
+  key: "MySecretKey12345"

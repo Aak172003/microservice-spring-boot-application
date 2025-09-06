@@ -1,0 +1,14 @@
+AES standards for Advanced Encryption Standard
+AES is a secure way to lock and unlock data using a secret key.
+
+Key Feature :
+1. Fast and Secure
+2. Use a fixed length key
+3. Same key for encryption and decryption
+
+AES is commonly used in spring cloud config server to protect sensitive configuration value like passwords and API Keys .
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+If we encrypt anything and store in database using prefix {cipher}encrypted_key then spring boot automatically decrypt data and show in application
+because we have setup encrypt.key in our application
