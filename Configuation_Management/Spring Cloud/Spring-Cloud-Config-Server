@@ -1,0 +1,4 @@
+This Spring Cloud Config Server allows you to store configuration in git , local files and databases
+
+Why this actually need to store configuration in database :
+1.
