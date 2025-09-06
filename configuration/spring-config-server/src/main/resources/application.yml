@@ -1,15 +1,36 @@
 spring:
   application:
     name: spring-config-server
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/Aak172003/spring-app-configuration
+#          # To access environments from private spring config server repository, we need to create a token for validation,
+#          # or even we can do hard-coding as well
+#          username: ${GIT_USER}
+#          password: ${GIT_TOKEN}
+
+# Now fetching configurations from mysql databses
+  profiles:
+    active: jdbc
+  datasource:
+    url: jdbc:mysql://localhost:3306/configdb
+    username: root
+    password: root@user123456789
+    driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/Aak172003/spring-app-configuration
-          # To access environments from private spring config server repository, we need to create a token for validation,
-          # or even we can do hard-coding as well
-          username: ${GIT_USER}
-          password: ${GIT_TOKEN}
+        jdbc:
+          sql: "SELECT PROP_KEY, PROP_VALUE FROM PROPERTIES WHERE APPLICATION=? AND PROFILE=? AND LABEL=?"
+          default-label: main
+
+
+
+
+
+
 
 server:
   port: 8888
