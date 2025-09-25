@@ -1,15 +1,29 @@
 spring:
   application:
     name: spring-config-server
+#  This is how tell fetch configurations from local files which present in our machine
+  profiles:
+#    here native tells used native file system
+    active: native
+
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/Aak172003/spring-app-configuration
-          # To access environments from private spring config server repository, we need to create a token for validation,
-          # or even we can do hard-coding as well
-          username: ${GIT_USER}
-          password: ${GIT_TOKEN}
+        native:
+#         This tells paths where configurations stores
+          search-locations: classpath:/config
+
+
+#  This below is used when fetching configurations from GitHub repository
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/Aak172003/spring-app-configuration
+#          # To access environments from private spring config server repository, we need to create a token for validation,
+#          # or even we can do hard-coding as well
+#          username: ${GIT_USER}
+#          password: ${GIT_TOKEN}
 
 # Now fetching configurations from mysql databses
 #  profiles:

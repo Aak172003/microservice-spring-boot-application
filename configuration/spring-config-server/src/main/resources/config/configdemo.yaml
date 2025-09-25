@@ -1,24 +1,26 @@
 #spring.application.name=config-demo
-spring:
-  application:
-    name: configdemo
 
 #  here setup for a spring cloud config client
 #  This marked is as optional, if not able to fetch from remote location then access from local environment variable (yml or properties file)
-  config:
-    import: optional:configserver:http://localhost:8888
-#   If I pass default profile from program argument, environment in intellij IDE, then we don't
-#   need to pass here profiles.active=dev
-  profiles:
-    active: dev
+#  config:
+#    import: optional:configserver:http://localhost:8888
+##   If I pass default profile from program argument, environment in intellij IDE, then we don't
+##   need to pass here profiles.active=dev
+#  profiles:
+#    active: dev
 
+build:
+  id: 101
+  version: 1.2.3
+  name: "Native Default-Default-Build"
+  type: "Native Default Build"
 
 # Here define actuator
-management:
-  endpoints:
-    web:
-      exposure:
-        include : refresh
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include : refresh
 
 # This is a default active profile
 #build:
