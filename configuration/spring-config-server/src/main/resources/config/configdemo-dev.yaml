@@ -1,0 +1,6 @@
+#spring.application.name=config-demo
+build:
+  id: 101
+  version: 1.2.3
+  name: "Native Dev-Production-Build"
+  type: "Native Development Build"
