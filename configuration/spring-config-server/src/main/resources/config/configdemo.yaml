@@ -33,8 +33,6 @@ build:
 #  name: "Default-Build"
 
 
-
-
 #  This is how we set environment variable from intellij IDE
 #  BUILD_ID=444444;BUILD_NAME=NAME_TEST;BUILD_VERSION=1.8.0
 
