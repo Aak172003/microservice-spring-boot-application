@@ -6,13 +6,26 @@ spring:
 #    here native tells used native file system
     active: native
 
+
   cloud:
     config:
       server:
         native:
-#         This tells paths where configurations stores
-          search-locations: classpath:/config
+#         This tells paths where configuration stores
+#          search-locations: classpath:/config
+          search-locations: file:///C:\Users\Aakash Prajapati\Desktop\microservice-spring-boot-application\configuration\spring-config-server\src\main\resources\config
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
+  # Here define actuator
+  management:
+    endpoints:
+      web:
+        exposure:
+          include : "*"
 
 #  This below is used when fetching configurations from GitHub repository
 #  cloud:
@@ -44,7 +57,7 @@ server:
   port: 8888
 
 
-#This only use when we add encrypted data using this key
+#This only uses when we add encrypted data using this key
 #encrypt:
 #  key: "MySecretKey12345"
 
