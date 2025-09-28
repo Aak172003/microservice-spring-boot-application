@@ -1,0 +1,40 @@
+spring:
+
+#  h2:
+#    console:
+#      enabled: true
+#  #  SQL statements will be printed in the console.
+#  jpa:
+#    show-sql: true
+#    #  Hibernate will drop and recreate the database schema on each application startup.
+#    hibernate:
+#      ddl-auto: create
+#  # In memory means this will persist data until the application is running If the application starts,
+#  #  then a database clears all the data
+#  datasource:
+#    url: jdbc:h2:mem:test
+
+
+  #  This is the setup for postgres database
+  datasource:
+    # jdbc means a protocol using which can connect to a database
+    # postgresql means database name or database type
+    # //localhost:5432/order This is a database url, and here order is a database name
+    url: jdbc:postgresql://localhost:5432/order
+    username: aakash
+    password: aakash
+
+  jpa:
+    database: POSTGRESQL
+    #  SQL statements will be printed in the console.
+    show-sql: true
+    #  Hibernate will drop and recreate the database schema on each application startup. This is used for schema management
+    hibernate:
+      ddl-auto: update
+    # Whenever spring-boot interacts with a database, it creates a query
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
+server:
+  port: 8083
+

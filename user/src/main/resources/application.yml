@@ -3,6 +3,9 @@ spring:
   application:
     name: user-service
 
+  config:
+    import: optional:configserver:http://localhost:8888
+
 #  h2:
 #    console:
 #      enabled: true
@@ -39,14 +42,14 @@ spring:
 #    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 #  This is the setup for mongodb database
-  data:
-    mongodb:
-#      This is a local mongodb database
-      uri: mongodb://localhost:27017/userdb
-
-#      This is url of a remote database ( mongodb atlas )
-#      uri: mongodb+srv://prajapatiaakash364:bZ7vdsjmMFVpOVAE@user-data.61hjt8l.mongodb.net/?retryWrites=true&w=majority&appName=user-data
-      database: userdb
-
-server:
-  port: 8082
+#  data:
+#    mongodb:
+##      This is a local mongodb database
+#      uri: mongodb://localhost:27017/userdb
+#
+##      This is url of a remote database ( mongodb atlas )
+##      uri: mongodb+srv://prajapatiaakash364:bZ7vdsjmMFVpOVAE@user-data.61hjt8l.mongodb.net/?retryWrites=true&w=majority&appName=user-data
+#      database: userdb
+#
+#server:
+#  port: 8082
