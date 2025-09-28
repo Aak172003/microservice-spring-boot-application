@@ -1,0 +1,3 @@
+To use Spring Cloud Bus we need to setup some things
+
+1. RabbitMQ
