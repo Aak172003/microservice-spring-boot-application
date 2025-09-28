@@ -40,11 +40,11 @@ spring:
   data:
     mongodb:
 #      This is a local mongodb database
-      uri: mongodb://localhost:27017/userdb
+      uri: ${MONGO_URI}
 
 #      This is url of a remote database ( mongodb atlas )
 #      uri: mongodb+srv://prajapatiaakash364:bZ7vdsjmMFVpOVAE@user-data.61hjt8l.mongodb.net/?retryWrites=true&w=majority&appName=user-data
-      database: userdb
+      database: ${DB_NAME}
 
 server:
   port: 8082

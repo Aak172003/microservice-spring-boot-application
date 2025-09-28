@@ -14,15 +14,14 @@ spring:
 #  datasource:
 #    url: jdbc:h2:mem:test
 
-
   #  This is the setup for postgres database
   datasource:
     # jdbc means a protocol using which can connect to a database
     # postgresql means database name or database type
     # //localhost:5432/order This is a database url, and here order is a database name
     url: jdbc:postgresql://localhost:5432/order
-    username: aakash
-    password: aakash
+    username: ${DB_NAME}
+    password: ${DB_PASSWORD}
 
   jpa:
     database: POSTGRESQL
